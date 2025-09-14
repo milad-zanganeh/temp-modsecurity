@@ -20,3 +20,5 @@ jobs:
         echo "Kernel: $(uname -r)"
         echo "Debian Version: $(cat /etc/debian_version)"
         ls -l
+        pwd
+        ls -l ..
