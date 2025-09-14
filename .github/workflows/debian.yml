@@ -1,0 +1,21 @@
+name: Debian Bookworm Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  print-os:
+    runs-on: ubuntu-latest
+    container: debian:bookworm-slim
+    
+    steps:
+    - name: Print OS Information
+      run: |
+        echo "Operating System: Debian Bookworm"
+        echo "OS Details:"
+        cat /etc/os-release
+        echo "Architecture: $(uname -m)"
+        echo "Kernel: $(uname -r)"
+        echo "Debian Version: $(cat /etc/debian_version)"

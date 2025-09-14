@@ -1,0 +1,19 @@
+name: Ubuntu 24.04 Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  print-os:
+    runs-on: ubuntu-24.04
+    
+    steps:
+    - name: Print OS Information
+      run: |
+        echo "Operating System: Ubuntu 24.04"
+        echo "OS Details:"
+        cat /etc/os-release
+        echo "Architecture: $(uname -m)"
+        echo "Kernel: $(uname -r)"
