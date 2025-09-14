@@ -19,4 +19,4 @@ jobs:
         echo "Architecture: $(uname -m)"
         echo "Kernel: $(uname -r)"
         echo "Debian Version: $(cat /etc/debian_version)"
-        ls 
+        ls -l
